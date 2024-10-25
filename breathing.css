@@ -10,6 +10,56 @@ body {
     background-color: #fef8f3;
     cursor: pointer;
 }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: none;
+    font-weight: 700;
+}
+
+.logo {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.sign-up {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 25px;
+    background: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-up:hover {
+    background-color: #333;
+    color: #fff;
+}
+
 /* Breathing Container */
 .breathing-container {
     display: flex;
