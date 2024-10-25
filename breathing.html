@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathing - Focus Flow</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="breathing.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/index.html">Focus Flow</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/agenda.html">Agenda</a></li>
+            <li><a href="breathing.html">Breathing</a></li>
+            <li><a href="journal.html">Journal</a></li>
+        </ul>
+        <button class="sign-up">You Are Loved</button>
+    </nav>
+
+    <div class="breathing-container">
+        <h1 id="main-title">Ready? It's time to breathe.</h1>
+        <img src="/srcImages/lol__2_-removebg-preview.png" alt="Breathing Visualization" id="breathing-image">
+        <div id="start-container">
+            <button id="ready-button" class="sign-up">Ready to get Started?</button>
+        </div>
+        <div id="duration-container" class="hidden">
+            <p>Select your breathing duration:</p>
+            <div class="options">
+                <label><input type="radio" name="duration" value="1"> 1 minute</label>
+                <label><input type="radio" name="duration" value="2"> 2 minutes</label>
+                <label><input type="radio" name="duration" value="3"> 3 minutes</label>
+                <label><input type="radio" name="duration" value="4"> 4 minutes</label>
+                <label><input type="radio" name="duration" value="5"> 5 minutes</label>
+            </div>
+            <button id="start-button" class="sign-up hidden">Start</button>
+        </div>
+        <div id="countdown-container" class="hidden"></div>
+        <div id="final-message" class="hidden">I'm proud of you!</div>
+    </div>
+
+    <script src="breathing.js"></script> 
+</body>
+</html>

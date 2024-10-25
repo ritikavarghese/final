@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - Focus Flow</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="agenda.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><a href="/index.html">Focus Flow</a> </div>
+        <ul class="nav-links">
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="/journal.html">Journal</a></li>
+            <li><a href="/breathing.html">Breathing</a></li>
+        </ul>
+        <button class="sign-up">You Are Loved</button>
+    </nav>
+
+    <section class="agenda">
+        <h1>Your Agenda</h1>
+        <input type="text" id="agenda-item" placeholder="Add a new item...">
+        <input type="text" id="time-estimate" placeholder="Estimated time needed (in hours)">
+        <button id="add-button">Add</button>
+        <ul id="agenda-list"></ul>
+    </section>
+
+    <script>
+        const addButton = document.getElementById('add-button');
+        const agendaList = document.getElementById('agenda-list');
+
+        window.onload = function() {
+            const storedItems = JSON.parse(localStorage.getItem('agendaItems')) || [];
+            storedItems.forEach(item => {
+                addItemToList(item.task, item.time);
+            });
+        };
+
+        function addItemToList(task, time) {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <input type="checkbox">
+                <span>${task}</span>
+                <span style="margin-left: 20px;">(Est. time: ${time} hours)</span>
+            `;
+            agendaList.appendChild(listItem);
+        }
+    
+        addButton.addEventListener('click', () => {
+            const agendaItem = document.getElementById('agenda-item').value;
+            const timeEstimate = document.getElementById('time-estimate').value;
+    
+            if (agendaItem) {
+                addItemToList(agendaItem, timeEstimate);
+    
+
+                const storedItems = JSON.parse(localStorage.getItem('agendaItems')) || [];
+                storedItems.push({ task: agendaItem, time: timeEstimate });
+                localStorage.setItem('agendaItems', JSON.stringify(storedItems));
+    
+
+                document.getElementById('agenda-item').value = ''; 
+                document.getElementById('time-estimate').value = ''; 
+            }
+        });
+    </script>
+    
+</body>
+</html>

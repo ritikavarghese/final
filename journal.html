@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal - Focus Flow</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="journal.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="/index.html">Focus Flow</a> </div>
+        <ul class="nav-links">
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="/breathing.html">Breathing</a></li>
+        </ul>
+        <button class="sign-up">You Are Loved</button>
+    </nav>
+
+    <section class="journal">
+        <h1>How are you feeling today?</h1>
+        <div class="question" id="emotion-question">
+            <p>Select your emotions (choose at least one):</p>
+            <div class="options" id="emotion-options">
+                <label><input type="checkbox" value="Happy"> Happy</label>
+                <label><input type="checkbox" value="Sad"> Sad</label>
+                <label><input type="checkbox" value="Angry"> Angry</label>
+                <label><input type="checkbox" value="Excited"> Excited</label>
+                <label><input type="checkbox" value="Anxious"> Anxious</label>
+                <label><input type="checkbox" value="Grateful"> Grateful</label>
+                <label><input type="checkbox" value="Frustrated"> Frustrated</label>
+                <label><input type="checkbox" value="Peaceful"> Peaceful</label>
+                <label><input type="checkbox" value="Bored"> Bored</label>
+                <label><input type="checkbox" value="Hopeful"> Hopeful</label>
+                <label><input type="checkbox" value="Tired"> Tired</label>
+                <label><input type="checkbox" value="Confident"> Confident</label>
+            </div>
+            <button id="emotion-continue" class= "button">Continue</button>
+        </div>
+
+        <div class="question hidden" id="mental-state-question">
+            <p>Select your mental state (choose at least one):</p>
+            <div class="options" id="mental-state-options">
+                <label><input type="checkbox" value="Stressed"> Stressed</label>
+                <label><input type="checkbox" value="Calm"> Calm</label>
+                <label><input type="checkbox" value="Overwhelmed"> Overwhelmed</label>
+                <label><input type="checkbox" value="Focused"> Focused</label>
+                <label><input type="checkbox" value="Distracted"> Distracted</label>
+                <label><input type="checkbox" value="Motivated"> Motivated</label>
+            </div>
+            <button id="mental-continue" class= "button">Continue</button>
+        </div>
+
+        <div class="question hidden" id="thoughts-question">
+            <p>Any additional thoughts you'd like to write down?</p>
+            <textarea id="thoughts-input" placeholder="Write your thoughts..."></textarea>
+            <button id="thoughts-continue" class= "button">Continue</button>
+        </div>
+
+        <div class="journal-entries" id="journal-entries"></div>
+        <div id="add-entry-section" class="hidden">
+            <p>Add another entry for today</p>
+            <button id="add-entry-button" class="button">Add</button>
+        </div>
+    </section>
+
+    <div class="journal-entries" id="journal-entries"></div>
+<div id="add-entry-section" class="hidden"></div>
+
+
+    
+
+    <script src="journal.js"></script> 
+</body>
+</html>

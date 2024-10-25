@@ -1,0 +1,62 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: #fef8f3;
+    cursor: pointer;
+}
+/* Breathing Container */
+.breathing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 900;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+#breathing-image {
+    width: 200px; 
+    transition: transform 5s ease-in-out; 
+}
+
+#start-container, #duration-container {
+    margin-top: 1rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#countdown-container {
+    font-size: 48px; 
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+#final-message {
+    margin-top: 2rem;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
